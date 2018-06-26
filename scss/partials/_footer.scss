@@ -1,0 +1,74 @@
+@mixin footer{
+    footer{
+   background-color: #E38F84; 
+    height: 200px;
+    margin-top: 10px;
+}
+/*    footer 5 columns*/
+    footer{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(1,1fr);
+    width: 100%;
+}
+
+/*align each column inline    */
+.contact, .company, .help_support{
+    display: inline-block;
+    height: 200px;
+    font-size: 11px;
+    width: 100%;
+//    margin-left: 5%;
+//    margin-right: 5%;
+}
+
+//media query for font optimisation
+@media screen and (max-width: 559px){
+.contact, .company, .help_support{
+    p{font-size: 10px;}
+    h4{
+        margin-bottom: 0px;
+        margin-top: 3px;
+    }
+}
+    .contact{
+        width: 110px;
+    }
+    
+}    
+    
+.contact{
+    display: inline-block;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    background-color: #E38F84;
+}
+.company{
+    display: inline-block;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    background-color: #E38F84;
+    
+    ul{
+        margin-left: -15px;
+    }
+}
+.help_support{
+    display: inline-block;
+    grid-column-start: 4;
+    grid-column-end: 5;
+    background-color:#E38F84;
+}
+    
+/*bottom footer    */
+.copyright{
+        display: block;
+        grid-column-start: 1;
+        grid-column-end: 6; 
+} 
+
+    
+    
+    
+    
+}

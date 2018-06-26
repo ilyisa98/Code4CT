@@ -1,0 +1,376 @@
+@mixin section {
+    
+    section{
+    background-color: blue;
+    height: 5675px;
+}
+section{
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    grid-template-rows: repeat(70,1fr);
+}
+
+.who_we_are{
+    display: block;
+    grid-column-start: 1;
+    grid-column-end: 11;
+    grid-row-start: 1;
+    grid-row-end: 10;
+    background-color:white;
+    text-align: center;
+}
+
+.who_we_are_content{
+    display: block;
+    grid-column-start: 1;
+    grid-column-end: 11;
+    grid-row-start: 1;
+    grid-row-end: 10;
+}
+.who_we_are_head{
+    display: block;
+    grid-column-start: 1;
+    grid-column-end: 11;
+    grid-row-start: 0;
+    grid-row-end: 1;
+    height: 20px;
+    margin-bottom: 0;
+}
+
+.who_we_are_intro{
+    display: block;
+    grid-column-start: 1;
+    grid-column-end: 11;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    font-size: 14px;
+    overflow: hidden;
+    margin-bottom: 0px;
+}
+.who_we_are_main{
+/*    margin-top: 0px;*/
+    display: block;
+    grid-column-start: 1;
+    grid-column-end: 11;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    font-size: 12px;
+    overflow: hidden;
+}
+.who_we_are_foot{
+    width: 100%;
+    height: 20px;
+    margin-top: 0px;
+    display: block;
+    grid-column-start: 1;
+    grid-column-end: 11;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+
+.who_we_are_photos{
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 11;
+    grid-row-start: 5;
+    grid-row-end: 10;
+    background-color: #E38F84;
+}
+
+.who_we_are_photo_group{
+    width: 250px;
+    height: 240px;
+    margin-top: 10px;
+}
+
+.course_outcome{
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 11;
+    grid-row-start: 10;
+    grid-row-end: 20;
+    background-color: black;
+    width: 100%;
+    margin-top: 0px;
+    height: 1000px;
+}
+    
+.course_outcome{
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(5,1fr);  
+    }    
+.course_outcome p{
+    width: 125px;
+    height: 60px;
+}
+    
+    
+.pc_icon, .speaker_icon, .tool_icon, .pages_icon{
+    display: block;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    width: 140px;
+    height: 240px;
+    color: white;
+    margin-top: 5px;
+}
+
+    
+.pc_icon p, .speaker_icon p, .tool_icon p, .pages_icon p{
+        font-size: 0.7em;
+        text-align: center;
+        margin-left: 7px;
+        margin-top: 10px;
+    }
+.pc_icon h4, .speaker_icon h4, .tool_icon h4, .pages_icon h4{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    }   
+    
+.pc_icon{
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.speaker_icon{
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.tool_icon{
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+.pages_icon{
+    margin-top: -25px;
+    grid-row-start: 5;
+    grid-row-end: 6;
+    height: 265px;
+}
+
+    
+    
+.course_outcome_icons{
+    height: 95px;
+    width: 95px;
+    margin-bottom: 0px;
+}
+  
+    
+    
+.our_awesome_portfolio{
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 11;
+    grid-row-start: 20;
+    grid-row-end: 30;
+    background-color: #E38F84;
+    width: 100%;
+    margin-top: 0px;
+}
+
+.portfolio_content{
+    display: block;
+    grid-column-start: 1;
+    grid-column-end: 11;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+.portfolio_group_pics{
+    display: block;
+    grid-column-start: 1;
+    grid-column-end: 11;
+    grid-row-start: 2;
+    grid-row-end: 10;
+    background-color: white;
+    width: 100%;
+    margin-top: 0px;
+}
+
+.portfolio_pics, .portfolio_pic{
+    width: 200px;
+    height: 200px;
+}
+
+
+.meet_our_team{
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 11;
+    grid-row-start: 30;
+    grid-row-end: 40;
+    background-color: #E38F84;
+    width: 100%;
+    margin-top: 0px;
+}
+
+.team_content{
+    display: block;
+    grid-column-start: 1;
+    grid-column-end: 11;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+.team_group_pics{
+    display: block;
+    grid-column-start: 1;
+    grid-column-end: 11;
+    grid-row-start: 2;
+    grid-row-end: 10;
+    background-color: white;
+    width: 100%;
+    margin-top: 0px;
+    
+}
+
+.team_pics{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.count_up{
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 11;
+    grid-row-start: 40;
+    grid-row-end: 50;
+    background-color: black;
+    width: 100%;
+    margin-top: 0px;
+    height: 200px;
+}
+
+
+.happy_client, .finish_project, .cup_of_coffee, .working_days, .honors_awards{
+    width: 80px;
+    height:60px;
+    background-color: white;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    margin-top: 0px;
+   
+}
+
+.happy_client{
+    display: inline-block;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    margin-left: 10px;
+}
+
+#happy_client_num, #finish_project_num, #cup_of_coffee_num, #working_days_num, #honors_awards_num{
+        margin-top: 15px;
+
+}
+
+.count_up_content{
+    margin-top: -20px;
+    font-size: 11px;
+}
+
+.finish_project{
+    display: inline-block;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.cup_of_coffee{
+    display: inline-block;
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+
+.working_days{
+    display: inline-block;
+    grid-column-start: 4;
+    grid-column-end: 5;
+}
+
+.honors_awards{
+    display: inline-block;
+    grid-column-start: 5;
+    grid-column-end: 6;
+}
+
+.subscribe_to_us{
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 11;
+    grid-row-start: 50;
+    grid-row-end: 60;
+    background-color: white;
+    width: 100%;
+    margin-top: 5px;
+    height: 200px;
+}
+
+.paper_plane_pink_icon{
+    width: 20px;
+    height: 15px;
+    margin-bottom: -3px;
+}
+
+.email_input{
+    width: 40%;
+}
+
+.email_label{
+    margin: 3px 0 0 0;
+    font-size: 16px;
+    line-height: 10px;
+/*    margin-top: 5px;*/
+    width: 200px;
+    height: 20px;
+    float:inherit;
+    cursor:auto;
+    color: #E38F84;
+}
+
+.submit_btn{
+    border-radius: 10px;
+    background-color: #E38F84;
+    color: white;
+}
+
+.campanies_carousel{
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 11;
+    grid-row-start: 60;
+    grid-row-end: 70;
+    background-color: black;
+    width: 100%;
+    margin-top: 15px;
+    height: 150px;
+}
+
+/* Slider */
+.wrapper {
+  overflow: hidden;
+}
+
+.sliding-background {
+  background: url(../images/Code4CT-logos.png) repeat-x;
+  height: 150px;
+  width: 5076px;
+  animation: slide 30s linear infinite;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+@keyframes slide{
+  0%{
+    transform: translate3d(0, 0, 0);
+  }
+  100%{
+    transform: translate3d(-3172px, 0, 0);
+  }
+}
+
+
+    
+    
+    
+}

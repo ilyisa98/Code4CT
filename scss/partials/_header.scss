@@ -1,0 +1,137 @@
+@mixin header{
+    header{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    grid-template-rows: repeat(10,1fr);
+    z-index: 0;
+    background-color: grey;
+    height: 450px;
+}
+
+
+/*overlay with text inside*/
+#overlay {
+    position: absolute;
+    display: block;
+    width: 65%;
+    height: 45%;
+    top: 100px;
+    left: 17%;
+    right: 20px;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1;
+}
+
+
+#overlay_text{
+    position: absolute;
+    cursor: pointer;
+    top: 50%;
+    left: 50%;
+    height: 250px;
+    width: 200px;
+    right: 50%;
+    font-size: 13px;
+    color: white;
+    text-align: center;
+    transform: translate(-50%,-50%);
+}
+
+button{
+    display: inline-block;
+    background-color: transparent;
+    color: palevioletred;
+    border-color: palevioletred;
+    z-index: 1;
+}
+
+button div{
+    display: none;
+}
+
+.overlay_btn:hover div{
+    display: inline-block;
+    background-color: palevioletred;
+    color: white;
+    -webkit-transition: 60s;
+    
+}
+
+.overlay_btn:hover {
+    padding-right: 10px;
+    background-color: palevioletred;
+    color: white;
+    transition: 0.5s;
+    padding-top: 0px;
+    text-align: left; 
+    cursor: pointer;
+}
+
+.overlay_btn{
+    -webkit-transition: 60s;
+}
+
+
+
+/*.mySlides {display:none;}*/
+
+
+
+
+.mySlides{
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+slider{
+    width: 100%;
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 11;
+    grid-row-start: 1;
+    grid-row-end: 11;
+    z-index: 0;
+}
+
+.slider_btns{
+/*    position: absolute;*/
+    display: inline-block;
+    width: 65%;
+    height: 10%;
+    bottom: 10px;
+    left: 17%;
+    right: 20px;
+    z-index: 1;
+}
+
+#next, #prev{
+    display: inline-block;
+     z-index: 1;
+    background-color: palevioletred;
+    color: white;
+}
+
+#next{
+    float: right;
+}
+
+/*
+.display-left, .display-right, .slider_badge {
+    cursor:pointer;
+    z-index: 1;
+}
+
+
+.slider_badge {
+    height:13px;
+    width:13px;
+    padding:0;
+    background-color:transparent
+        left: 20px;
+}
+*/
+
+}

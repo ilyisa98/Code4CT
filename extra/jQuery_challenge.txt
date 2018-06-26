@@ -1,0 +1,60 @@
+<!Doctype />
+<html>
+    <head>
+        <title>Crezell.</title>
+        <link type="text/css" rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div class="container">
+            <form>
+                <input type="text" name="name" placeholder="Enter name" value="Susan"><br>
+                <input type="email" name="email" placeholder="Enter email" value="susan@gmail.com"><br>
+                <textarea rows="4" name="message">This is my test message</textarea><br>
+                <button type="submit">SEND MESSAGE</button>
+            </form>
+            <div id="message">
+                <p>Message Sent with:</p>
+            </div>
+        </div>
+
+        <!-- PULL IN JQUERY LIBRARY -->
+        <script src="js/jquery.min.js"></script>
+
+        <!-- USE JQUERY -->
+        <script>
+
+            // READY FUNCTION
+            $(document).ready(function() {
+
+                //hide message onload
+                $('#message').hide();
+
+                //when the form submits
+                $('form').submit(function (e) {
+
+                    //prevent the form from submitting
+                    e.preventDefault();
+
+                    //get all the data from the form in array format
+                    var data = $('form').serializeArray();
+
+                    // console.log(data);
+                    
+                    //loop through the array to append the data
+                    $.each(data, function(key, obj) {
+
+                        //console.log(key, obj) //checks the data
+
+                        //appends the data to the message div
+                        $('#message').append(obj.value + '<br>');
+                    })
+
+                    //show message div
+                    $('#message').show();
+                })
+
+            });
+
+        </script>
+    </body>
+</html>

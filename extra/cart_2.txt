@@ -1,0 +1,48 @@
+<div class="product-price" style="margin-left:60px;"></div>
+
+<div class="quantity">
+  <button class="plus-btn" type="button" name="button">
+      <img src="../img/svg/PlusQ.png" alt="" />
+  </button>
+   
+  <input type="text" name="name" value="1">
+
+  <button class="minus-btn" type="button" name="button">
+    <img src="../img/svg/MinusQ.png" alt="" />
+  </button>
+                            
+<div class="total-price">&lt;label>&lt;/label></div>
+
+
+$('.minus-btn').on('click', function (e) {
+    e.preventDefault();
+    var $this = $(this);
+    var $input = $this.closest('div').find('input');
+    var $totalprice = $this.closest('div').find('lable'); // I have problem with this line
+    var value = parseInt($input.val());
+
+    if (value != 1) {
+        value = value - 1;
+    } else {
+        value = 0;
+    }
+
+    $input.val(value);
+    $totalprice.innerHTML = value * 2; // Testing if Total price works, It Does NOT
+
+});
+
+$('.plus-btn').on('click', function (e) {
+    e.preventDefault();
+    var $this = $(this);
+    var $input = $this.closest('div').find('input');
+    var value = parseInt($input.val());
+
+    if (value != 100) {
+        value = value + 1;
+    } else {
+        value = 100;
+    }
+
+    $input.val(value);
+});

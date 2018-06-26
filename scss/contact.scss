@@ -1,0 +1,227 @@
+/* MOBILE STYLES FIRST - MOBILE STYLES*/
+
+@import "partials/nav_bar.scss";
+@import "partials/footer.scss";
+
+
+
+
+
+
+html, body{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0px;
+}
+
+html{
+    font-family: "helvetica neue", sans-serif;
+}
+
+/*
+.container *{
+    border: 1px solid black;
+}
+*/
+
+
+/*page layout*/
+header {grid-area: header;}
+nav {grid-area: nav;}
+section {grid-area: section;}
+.message_us_form {grid-area: message_us_form;}
+.contact_info{grid-area: contact_info;}
+.google_location{grid-area: google_location}
+
+
+footer {grid-area: footer;}
+
+
+
+
+/*outermost div - grid*/
+.container{
+     display: grid;
+     grid-template-areas: "header"
+                         "section"
+                         "footer";   
+     grid-template-rows: 1fr;
+     grid-template-columns: 1fr;
+     grid-gap: 10px;
+     margin: 0px;
+}     
+
+/*layout specs*/
+header, section, footer {
+        width: 100%;
+        margin: 2px;
+        margin-bottom: 0px;
+}
+
+/*header specs - grid*/
+header{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    grid-template-rows: repeat(10,1fr);
+    z-index: 0;
+}
+
+
+/*header code4ct background img*/
+.header_img{
+    display: grid;
+    grid-column: 1/11;
+    grid-row: 3/11;
+    grid-template-columns: repeat(10,1fr);
+    grid-template-rows: repeat(10,1fr);
+}
+
+.header_img img{ 
+    width: 100%;
+    height: 200px;    
+    grid-column: 1/11;
+    grid-row: 1/2;
+}
+
+
+
+/*header colour and height*/
+header{
+background-color: grey;
+height: 250px;
+}
+
+//nav bar
+@include nav_bar;
+
+
+//contact us
+.contact_us_tag{
+    display: block;
+    grid-column-start: 5;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 2; 
+    width: 150px;
+    margin-top: 70px;
+    text-align: center;
+    line-height: 12px;
+    margin-left: 15%;
+    color: #E38F84;
+    
+}
+
+
+//secction layout
+section{
+    display: grid;
+     grid-template-areas:   "message_us_form" "contact_info" "google_location";  
+    background-color: white;
+    height: 790px;
+}
+
+.message_us_form{
+    height: 290px;
+    background-color: #E39085;
+}
+
+#message_input{
+    height: 35px;
+}
+
+.contact_info{
+    height: 270px;
+    background-color: white;
+}
+
+.google_location{
+    height: 200px;
+    background-color:cadetblue;
+}
+.message_us_form,.contact_info, .google_location{
+    text-align: center;
+    width: 100%;
+}
+
+
+/*footer////////////////////////*/
+@include footer;
+
+/*laptop//////////////////////////////////////*/
+
+@media screen and (min-width: 500px) and (max-width: 1440px){
+  
+    .contact_tag{
+        margin-left: 40%
+    }
+    
+//    width of input
+    input{
+        width: 100%;
+    }
+    #email_input{
+        margin: 1px;
+    }
+    
+/*    section*/
+    section{
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    grid-template-rows: repeat(10,1fr);
+        height: 500px;
+    }
+    
+    .message_us_form{
+        display: inline-block;
+        grid-column-start: 2;
+        grid-column-end: 7;
+        grid-row-start: 1;
+        grid-row-end: 7;
+        width: 100%;
+        height: 270px;
+        
+        display: grid;
+        grid-template-rows: repeat(10,1fr);
+        
+        input{
+            line-height: 20px;
+        }
+        #submit{
+            width: 40%;
+            margin-left: 30%;
+        }
+        
+    }
+    
+    
+
+    .contact_info{
+        display: inline-block;
+        grid-column-start: 7;
+        grid-column-end: 10;
+        grid-row-start: 1;
+        grid-row-end: 7;
+        width: 100%;
+        height: 270px;
+        display: grid;
+        
+        p{
+            margin: 3px 0 3px 0;
+        }
+    }
+    
+    .google_location{
+        display: block;
+        grid-column-start: 1;
+        grid-column-end: 11;
+        grid-row-start: 7;
+        grid-row-end: 10;
+        width: 100%;
+        
+}
+    
+    
+}
