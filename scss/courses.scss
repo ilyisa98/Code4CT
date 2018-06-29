@@ -1,0 +1,238 @@
+/* MOBILE STYLES FIRST - MOBILE STYLES*/
+@import "partials/nav_bar.scss";
+@import "partials/footer.scss";
+
+
+
+html, body{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0px;
+}
+
+html{
+    font-family: "helvetica neue", sans-serif;
+}
+
+.container *{
+    border: 1px solid black;
+}
+
+
+/*page layout*/
+header {grid-area: header;}
+nav {grid-area: nav;}
+section {grid-area: section;}
+//.campanies_carousel {grid-area: campanies_carousel;}
+footer {grid-area: footer;}
+
+
+
+
+/*outermost div - grid*/
+.container{
+     display: grid;
+     grid-template-areas: "header"
+                         "section"
+                         "footer";   
+     grid-template-rows: 1fr;
+     grid-template-columns: 1fr;
+     grid-gap: 10px;
+     margin: 0px;
+}     
+
+/*layout specs*/
+header, section, footer {
+        width: 100%;
+        margin: 2px;
+        margin-bottom: 0px;
+}
+
+/*header specs - grid*/
+header{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    grid-template-rows: repeat(10,1fr);
+    z-index: 0;
+}
+
+/*nav position in header*/
+@include nav_bar;
+
+
+
+/*header code4ct background img*/
+.header_img{
+    display: grid;
+    grid-column: 1/11;
+    grid-row: 3/11;
+    grid-template-columns: repeat(10,1fr);
+    grid-template-rows: repeat(10,1fr);
+}
+
+.header_img img{ 
+    width: 100%;
+    height: 200px;    
+    grid-column: 1/11;
+    grid-row: 1/2;
+}
+
+
+
+/*header colour and height*/
+header{
+background-color: grey;
+height: 250px;
+}
+
+.courses_tag{
+    display: block;
+    grid-column-start: 5;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 2; 
+    width: 150px;
+    height: 80px;
+    margin-top: 70px;
+    text-align: center;
+    line-height: 12px;
+    margin-left: 15%; 
+    background-color: rgba(0,0,0,0.5);
+    color: #E69286;
+}
+
+
+
+//section
+section{
+    background-color: rgba(0,0,0,0.5);
+    height: 820px;
+}
+
+//section layout
+    section{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4,1fr);
+  
+    .main_content{
+    display: grid;
+    grid-row: 1/4;
+    width: 100%;
+    height: 100%;
+    background-color: pink;     
+    }
+    
+    .campanies_carousel{
+    display: grid;
+    grid-row: 4/5;
+    background-color: black;
+    width: 100%;
+    height: 150px;
+    margin-top: 15px;
+    height: 150px;
+}
+}
+        
+//    main content layout
+        
+    .main_content{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 1fr; 
+    height: 645px;
+    }   
+    
+    .courses{
+    display: inline-grid;
+    grid-column: 1/4;
+    grid-row: 1/2;
+    }
+        
+    .basket{
+    display: inline-grid;
+    grid-column: 4/5;
+    grid-row: 1/2;
+    }   
+
+    .beginners_courses_content{
+    height: 250px;
+        display: flex;
+    }
+
+    #beginner_js, #beginner_fsw, #beginner_pyth {
+//    display: inline-grid;
+    width: 32%;
+    height: 100%;
+    font-size: 12px;
+        
+        p{
+            margin: 5px 0 5px 0;
+        }
+        
+    }
+
+
+
+
+    .intermediate_courses_content{
+    height: 250px;
+      display: flex;
+    }
+
+    #intermediate_js, #intermediate_fsw, #intermediate_pyth {
+//    display: inline-block;
+    width: 32%;
+    height: 100%;
+    font-size: 12px;
+        
+        p{
+            margin: 5px 0 5px 0;
+        }
+        
+    }
+
+//main content styling
+
+    .main_content{
+        h3{
+            text-align: center;
+        }
+    }
+
+
+
+
+/* Slider */
+.wrapper {
+  overflow: hidden;
+}
+
+.sliding-background {
+    overflow: hidden;
+  background: url(../images/Code4CT-logos.png) repeat-x;
+  height: 150px;
+  width: 5076px;
+  animation: slide 30s linear infinite;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+@keyframes slide{
+  0%{
+    transform: translate3d(0, 0, 0);
+  }
+  100%{
+    transform: translate3d(-3172px, 0, 0);
+  }
+}
+
+
+
+
+///footer/
+@include footer;
+

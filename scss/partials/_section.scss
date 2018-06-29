@@ -1,7 +1,7 @@
 @mixin section {
     
     section{
-    background-color: blue;
+    background-color: white;
     height: 5675px;
 }
 section{
@@ -74,7 +74,7 @@ section{
     grid-column-end: 11;
     grid-row-start: 5;
     grid-row-end: 10;
-    background-color: #E38F84;
+    background-color: rgba(0,0,0,0.5);
 }
 
 .who_we_are_photo_group{

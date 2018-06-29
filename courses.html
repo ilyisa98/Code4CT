@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="css/courses.css">
+	<title>Code4CT</title>
+</head>
+    
+  <body>
+        <div class="container">
+            <header>
+                <nav>
+                    
+                    <img id="logo" src="images/code4ct-logo.jpg" width="125px" height="50px">
+
+                    <label for="toggle">&#9776;</label>
+<!--                    display hamburger icon--> 
+                    <input  type="checkbox"id="toggle"/>
+                     <!-- acts as input for nav bar with an id of toggle that checks the checkbox once nav-icon is clicked-->
+                    
+                    <div class = "menu">
+<!--                    menu with list of links to different pages                     --><center>
+                    <a href="index.html">Home</a> 
+                    <a href="about.html">About</a> 
+                    <a href="#">Courses</a> 
+                    <a href="portfolio.html">Portfolio</a> 
+                    <a href="contact.html">Contact</a>
+                </center>
+                    <button id="search_icon_btn"></button>     
+                        
+                    <input id="search_bar" type="text" placeholder="search">    
+                    
+                    </div>
+                </nav>
+                <div class="header_img">
+                
+                    <img src="images/Girl-Code-Page-Header.png"> 
+                    
+                <div class="courses_tag">
+                <h3>OUR COURSES</h3>
+                <p id="home_portfolio_tag">Home > Courses</p>
+                </div>
+                    
+                </div>
+            </header>
+            
+            
+            <section>
+                
+                
+                <div class="main_content">
+                    
+                <div class="courses">
+                <div class="beginners_courses">    
+                <h3>Beginner Coding Courses</h3>
+                <div class="beginners_courses_content">
+                    
+                 <div id="beginner_js" class="item" >
+                <h4>Beginner JavaScript</h4>
+
+                <p>Develop a basic proficiency in programming structures and methods in JavaScript so that you are able to create an interactive web application.</p>
+
+                <p><b>Duration:</b> 6 days</p>
+
+                <p><b>Price:</b> R1800</p>
+                     
+                <button type="button" onclick="addCart('Beginner JavaScript', 1800)">Register</button>  
+                     
+                     
+                <button type="button" onclick="removeCart('Beginner JavaScript')">De-register</button>
+ 
+                </div>   
+                 <div id="beginner_fsw" class="item">
+                <h4>Beginner Front End Web Development</h4>
+
+                <p>Develop a good proficiency in CSS and an understanding of web design principles so that you are able to create visually pleasing web pages.</p>
+
+                <p><b>Duration:</b> 6 days</p>
+
+                <p><b>Price:</b> R1800</p>   
+                    
+                <button type="button" onclick="addCart('Beginner Front End Web Development', 1800)">Register for course</button> 
+                     
+                <button type="button" onclick="removeCart('Beginner JavaScript')">De-register</button>     
+                    
+                </div>   
+                 <div id="beginner_pyth" class="item">   
+                  
+                <h4>Beginner Python</h4>
+
+                <p>Develop a basic proficiency in programming principles and methods in Python.</p>
+                     
+                <p><b>Duration:</b> 6 days</p>     
+
+                <p><b>Price:</b> R1800</p>   
+                    
+                <button type="button" onclick="addCart('Beginner Python', 1800)" >Register for course</button>    
+                </div>
+                    
+                    
+                    
+                </div> 
+                    
+                    
+                    
+                </div>
+                <div class="intermediate_courses">  
+                <h3>Intermediate Coding Courses</h3>   
+                <div class="intermediate_courses_content">
+                    
+                <div id="intermediate_js" class="item">
+                <h4>Full Stack JavaScript</h4>
+
+                <p>Develop an understanding of the front and backend development environment and basic proficiency in server side JavaScript and object-oriented programming. By the end of the course you will be able to architect an application, control flow in an application and persist and retrieve data in a database.</p>
+                     
+                <p><b>Duration:</b> 6 days</p>     
+
+                <p><b>Price:</b> R1800</p>   
+                    
+                <button type="button" onclick="addCart('Full Stack JavaScript', 1800)">Register for course</button>    
+                    
+                    
+                </div>   
+                <div id="intermediate_fsw" class="item">
+                <h4>Website Deployment</h4>
+
+                <p>Learn how to manage and deploy code to a server environment so that you can host your own web pages.</p>
+                     
+                <p><b>Duration:</b> 4 days</p>     
+
+                <p><b>Price:</b> R1200</p>   
+                    
+                <button type="button" onclick="addCart('Website Deployment', 1200)">Register for course</button>    
+                </div>    
+                    
+                  
+                <div id="intermediate_pyth" class="item">
+                 <h4>Intermediate Python</h4>
+
+                <p>Learn the introduction to the design and analysis of algorithms, enabling you to discover how individuals are connected, puzzles are solved, and problems are worked out. All with the help of Python.</p>
+                     
+                <p><b>Duration:</b> 6 days</p>     
+
+                <p><b>Price:</b> R1800</p>   
+                    
+                <button type="button" onclick="addCart('Intermediate Python', 1800)">Register for course</button>   
+
+                </div>     
+                    
+                  </div>   
+                </div>
+                    
+                </div>
+                
+                
+                <div id="basket">
+                <div class="basket_content">
+                <h3>Basket</h3> 
+                    
+                    <div id="cart"></div>
+                    
+                    
+                    
+                </div>
+                </div>
+                
+                </div>
+
+                <!--logo carousel-->
+                <div class="campanies_carousel">
+                     <div class="wrapper">
+                    <div class="sliding-background"></div>
+                    </div>           
+
+
+                </div>
+
+                
+
+            </section>
+            
+                <footer>
+             
+                
+
+                <div class="contact">
+                <h4>More Contact Info</h4>
+                <p><img src="images/footer/telephone_icon.png" width="15px" height="15px" style="margin-top: 2px">021 685 0991</p>
+                <p><img src="images/footer/email_icon.png" width="15px" height="15px" style="margin-top: 2px">info@code4ct.com</p>
+                <p><img src="images/footer/telephone_icon.png" width="15px" height="15px" style="margin-top: 2px"> Innovate South Africa,
+                    403 Old Castle Brewery, 6 Beach Rd,
+                    Woodstock, Cape Town, 7915</p>
+                </div>
+                <div class="company">
+                    <h4>Company</h4>
+                <ul>
+                    <li>About Us</li>
+                    <li>Contact Us</li>
+                    <li>Blog</li>
+                    <li>Tesimonials</li>
+                    <li>Affiliate Program</li>
+                    </ul>
+                
+                </div>
+                <div class="help_support">
+                <h4>Help &amp; Support</h4>
+                <ul>
+                    <li>Help centre</li>
+                    <li>Free simple template</li>
+                    <li>Refund policy</li>
+                    <li>Report spam</li>
+                    </ul>
+                    
+                </div>
+
+            
+            <div class="copyright">Copyright &#8226; 2018 Privacy</div>
+            
+            
+            </footer>
+            
+      </div>
+      
+      <script src="js/main_courses.js" ></script>
+      
+
+      
+      
+    </body> 
+    
+</html>

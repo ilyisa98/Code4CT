@@ -57,6 +57,10 @@ header, section, footer {
     height: 450px;
     z-index: 0;
 }
+    
+     .one{
+        margin-left: 35%;
+    }
     .who_we_are{
         height: 500px;
     }
@@ -138,15 +142,28 @@ header, section, footer {
         
     }
     
+   .course_outcome{
+    height: 240px;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: repeat(10,1fr);
+        
+    }
+    
     .pc_icon, .speaker_icon, .tool_icon, .pages_icon{
     display: inline-block;
-    width: 100px;
+    width: 150px;
     height: 210px;
-    margin-left: 20%;
+    margin-left: 0;
     grid-row-start: 1;
-    grid-row-end: 10;
-    font-size: 12px;
-        margin-top:10px;
+    grid-row-end: 11;
+    font-size: 14px;
+    margin-top:10px;
+        
+        p{
+            width: 150px;
+            font-size: 11px;
+        }
 }
 
   .pc_icon h4,.speaker_icon h4, .tool_icon h4, .pages_icon h4 {
@@ -155,23 +172,23 @@ header, section, footer {
     
     
 .pc_icon{
-    grid-column-start: 1;
-    grid-column-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
 }
   
 .speaker_icon{
-    grid-column-start: 2;
+    grid-column-start: 3;
     grid-column-end: 4;
 }
 
 .tool_icon{
     grid-column-start: 4;
-    grid-column-end: 6;
+    grid-column-end: 5;
 }
 
 .pages_icon{
-    grid-column-start: 6;
-    grid-column-end: 8;
+    grid-column-start: 5;
+    grid-column-end: 6;
 }
 
 .course_outcome_icons{
@@ -395,8 +412,8 @@ header, section, footer {
         height: 400px;
     }
     
-    .happy_client, .finish_project, .cup_of_coffee, .working_days, .honors_awards{
-    margin-left: 20px;
+    .happy_client, .finish_project, .cup_of_coffee, .working_days{
+    margin-left: 20%;
 }
     
     section{
@@ -406,7 +423,23 @@ header, section, footer {
     
 }
 
-
+//context better alignment
+@media screen and (min-width: 470px) and (max-width: 525px){
+       .happy_client, .finish_project, .cup_of_coffee, .working_days{
+    margin-left: 15%;
+           
+}
+    .one{
+        margin-left: 30%;
+    }
+}
+@media screen and (min-width: 426px) and (max-width: 469px){
+       .happy_client, .finish_project, .cup_of_coffee, .working_days{
+    margin-left: 12%;
+}   .one{
+        margin-left: 25%;
+    }
+}
 
 
 
@@ -421,12 +454,12 @@ header, section, footer {
 }
     
     header{
-        height: 300px;
+        height: 320px;
     }
     
     .mySlides{
         width: 100%;
-        height: 300px;
+        height: 320px;
         z-index: 0;
     }
     
@@ -440,6 +473,13 @@ header, section, footer {
         height: 180px;
     }
     
+    .slider_btn{
+        top: 295px;}
+    
+        .happy_client, .finish_project, .cup_of_coffee, .working_days{
+        margin-left: 10%;
+    }
+    
     section{
     height: 5590px;
 }
@@ -451,12 +491,12 @@ header, section, footer {
 @media screen and (min-width: 320px) and (max-width: 375px){
 
     header{
-        height: 300px;
+        height: 320px;
     }
     
     .mySlides{
         width: 100%;
-        height: 300px;
+        height: 320px;
         z-index: 0;
     }
     
@@ -469,6 +509,13 @@ header, section, footer {
         top: 50%;
         height: 180px;
     }
+    
+    .slider_btn{
+        top: 295px;}
+        .happy_client, .finish_project, .cup_of_coffee, .working_days{
+            margin-left: 9%;
+            width: 70px;
+}
 
 section{
     height: 5670px;
@@ -477,14 +524,36 @@ section{
 }
 //small mobile
 @media screen  and (max-width: 320px){
+    header{
+        height: 320px;
+    }
+    
+    .mySlides{
+        width: 100%;
+        height: 320px;
+        z-index: 0;
+    }
+    #overlay{
+        height: 165px;
+    }
+    
+    #overlay_text{
+        font-size: 11px;
+        top: 50%;
+        height: 180px;
+    }
+    
+    
     section{
-    height: 5725px;
+    height: 5830px;
     }
     
-    .happy_client{
-        margin-left: 0px;
-    }
-    
+    .happy_client, .finish_project, .cup_of_coffee, .working_days{
+    width: 60px;
+    margin-left: 5%;
+}
+    .slider_btn{
+        top: 295px;}
 }
 
 
@@ -495,7 +564,10 @@ section{
         height: 550px;
     }    
     
-    
+     .one{
+        margin-left: 25%;
+    }   
+
     
 /*    section reduction*/
     section{
@@ -575,28 +647,43 @@ section{
     }
     
     .pc_icon, .speaker_icon, .tool_icon, .pages_icon{
-    margin-left: 10%;
+    width: 140px;
+        
+        p{
+            width: 100px;
+            font-size: 10px;
+            margin-left: 20px;
+        }
 }
 }
+
 
 //tablet
 
-@media screen and (min-width: 425px) and (max-width: 500px){
+@media screen and (min-width: 425px) and (max-width: 550px){
         
         
         .pc_icon, .speaker_icon, .tool_icon, .pages_icon{
-            display: inline-block;
-            width: 80px;
-            height: 210px;
-            margin-left: 10%;
-            grid-row-start: 1;
-            grid-row-end: 10;
-            font-size: 11px;
-            margin-top:10px;
-        }}
+            width: 100px;
+            margin-left: 0;
+        p{
+            width: 105px;
+            font-size: 10px;
+            margin-left: 0px;
+        }
+            
+        .one{
+        margin-left: 24%;
+    }
+    
+    }
+    
+    
 
 
-@media screen and (min-width: 769px) and (max-width: 1024px){
+}
+//latop
+@media screen and (min-width: 768px) and (max-width: 1024px){
     
      .mySlides{
     width: 100%;
@@ -604,17 +691,19 @@ section{
     z-index: 0;
 }
     .who_we_are{
-        height: 400px;
-    }   
+        height: 250px;
+    }
     
-     .who_we_are_content{
+    
+    .who_we_are_content{
        
     display: inline-block;
     grid-column-start: 1;
     grid-column-end: 5;
     grid-row-start: 1;
     grid-row-end: 6;
-        width: 50;
+        width: 50%;
+    height: 200px;
     
 }
     .who_we_are_head{
@@ -624,7 +713,9 @@ section{
     .read_more{
         margin-bottom: 20px;
     }
+    
 
+    
     .who_we_are_photos{
        
     display: inline-block;
@@ -633,14 +724,18 @@ section{
     grid-row-start: 1;
     grid-row-end: 6;
     background-color: white;
-        height: 0px
+        margin-bottom: 10px;
+//        height: 0px
     
 }
+    
+
     .who_we_are_photo_group{
         display: inline-block;
     width: 155px;
     height: 100px;
         margin-top: 0px;
+/*    margin: 10px 10px 10px 10px;*/
 }
     
     .who_we_are_img1, .who_we_are_img2, .who_we_are_img3, .who_we_are_img4 {
@@ -754,12 +849,12 @@ section{
     
     
     .portfolio_pic{
-        width: 300px;
+        width: 400px;
         height: 315px;
     }  
     
     .portfolio_pics{
-        width: 150px;
+        width: 200px;
         height: 150px;
 
     }
@@ -768,6 +863,7 @@ section{
         width: 150px;
         height: 150px;
         margin: 5px;
+        padding-right: 30px;
     }   
   
     .portfolio_pic_1,.portfolio_pic_2{
@@ -943,7 +1039,7 @@ section{
     
     .count_up{
     display: grid;
-    grid-template-columns: repeat(6,1fr);
+    grid-template-columns: repeat(5,1fr);
     grid-template-rows: repeat(3,1fr);  
     }
     
@@ -951,6 +1047,7 @@ section{
     .happy_client, .finish_project, .cup_of_coffee, .working_days{
     display: inline-block;
     grid-row: 2/3;
+    margin-left: -20%;
 }
     
     .happy_client{
@@ -966,6 +1063,10 @@ section{
         grid-column: 5/6;
     }
     
+    .email_label{
+        display: block;
+    }
+    
     section{
     background-color: blue;
     height: 2000px;
@@ -975,8 +1076,411 @@ section{
     
 }
 
+//better content alignment
+@media screen and (min-width: 907px) and (max-width: 1024px){
+    
+    .who_we_are_main{
+        font-size: 13px;
+    }
+    .who_we_are_head{
+        margin-top: -5px
+    }
+    
+}
 
 
+@media screen and (min-width: 1026px) and (max-width: 1440px){
+    
+     .mySlides{
+    width: 100%;
+    height: 450px;
+    z-index: 0;
+}
+    .who_we_are{
+        height: 250px;
+    }
+    
+    
+    .who_we_are_content{
+       
+    display: inline-block;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 6;
+        width: 50%;
+    height: 200px;
+    
+}
+    .who_we_are_head{
+        margin-top: 10px;
+}
+    
+    .read_more{
+        margin-bottom: 20px;
+    }
+    
+
+    
+    .who_we_are_photos{
+       
+    display: inline-block;
+    grid-column-start: 5;
+    grid-column-end: 11;
+    grid-row-start: 1;
+    grid-row-end: 6;
+    background-color: white;
+        margin-bottom: 10px;
+//        height: 0px
+    
+}
+    
+
+    .who_we_are_photo_group{
+        display: inline-block;
+    width: 155px;
+    height: 100px;
+        margin-top: 0px;
+/*    margin: 10px 10px 10px 10px;*/
+}
+    
+    .who_we_are_img1, .who_we_are_img2, .who_we_are_img3, .who_we_are_img4 {
+        display: inline-block;
+    }
+    
+    .who_we_are_img1, .who_we_are_img2{
+    grid-row-start: 1;
+    grid-row-end: 3;
+    }
+    
+    .who_we_are_img3, .who_we_are_img4{
+    grid-row-start: 5;
+    grid-row-end: 6;
+    }
+    
+    .who_we_are_img1, .who_we_are_img3{
+    grid-column-start: 5;
+    grid-column-end: 6;
+    }
+    
+    .who_we_are_img2, .who_we_are_img4{
+    grid-column-start: 6;
+    grid-column-end: 7;
+    }
+     
+    .top_group{
+        margin-top: 10px;
+    }
+    
+.course_outcome{
+    height: 240px;
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: repeat(10,1fr);
+        
+    }
+    
+    .pc_icon, .speaker_icon, .tool_icon, .pages_icon{
+    display: inline-block;
+    width: 150px;
+    height: 210px;
+    margin-left: 0;
+    grid-row-start: 1;
+    grid-row-end: 11;
+    font-size: 14px;
+    margin-top:10px;
+        
+        p{
+            width: 150px;
+            font-size: 13px;
+        }
+}
+
+  .pc_icon h4,.speaker_icon h4, .tool_icon h4, .pages_icon h4 {
+        margin-top:0px;
+    }
+    
+    
+.pc_icon{
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+  
+.speaker_icon{
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+
+.tool_icon{
+    grid-column-start: 4;
+    grid-column-end: 5;
+}
+
+.pages_icon{
+    grid-column-start: 5;
+    grid-column-end: 6;
+}
+
+.course_outcome_icons{
+    height: 50px;
+    width: 50px;
+}
+
+.portfolio_content{
+    margin-left: 5%;
+    margin-right: 5%;
+}    
+  
+    portfolio_group_pics{
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    grid-template-rows: repeat(10,1fr); 
+    }    
+    
+    
+
+    .portfolio_group1{
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    grid-template-rows: repeat(10,1fr);
+    width: 50%;    
+    }
+    
+    .portfolio_group2{
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    grid-template-rows: repeat(10,1fr);
+    width: 40%;    
+    }
+    
+    
+    .portfolio_pic{
+        width: 400px;
+        height: 315px;
+    }  
+    
+    .portfolio_pics{
+        width: 200px;
+        height: 150px;
+
+    }
+  
+    .portfolio_pic_1,.portfolio_pic_2,.portfolio_pic_3,.portfolio_pic_4{
+        width: 150px;
+        height: 150px;
+        margin: 5px;
+        padding-right: 30px;
+    }   
+  
+    .portfolio_pic_1,.portfolio_pic_2{
+        margin-top: 0px;
+    }
+    
+.portfolio_pic_1{
+    display: inline-grid;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 5;
+    }
+.portfolio_pic_2{
+    display: inline-grid;
+    grid-column-start: 5;
+    grid-column-end: 10;
+    grid-row-start: 1;
+    grid-row-end: 5;
+    }
+.portfolio_pic_3{
+    display: inline-grid;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 5;
+    grid-row-end: 10;
+/*    margin-top: 10px;*/
+    }
+.portfolio_pic_4{
+    display: inline-grid;
+    grid-column-start: 5;
+    grid-column-end: 10;
+    grid-row-start: 5;
+    grid-row-end: 10;
+/*    margin-top: 10px;*/
+    }
+    
+
+        
+    
+.portfolio_pic_5{
+    display: inline-block;
+    grid-column-start: 1;
+    grid-column-end: 10;
+    grid-row-start: 1;
+    grid-row-end: 10;
+    margin-left: 0px;
+    } 
+    
+        .portfolio_group1{
+    display: inline-block;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 10;
+
+    }
+    
+    .portfolio_group2{
+    display: inline-block;
+    grid-column-start: 5;
+    grid-column-end: 10;
+    grid-row-start: 1;
+    grid-row-end: 10;
+    }   
+    
+   
+    .team_group_pics{
+        display: grid;
+    grid-template-columns: repeat(10,1fr);
+    grid-template-rows: repeat(10,1fr);
+    }
+    
+    .team_pics{
+        width: 150px;
+        height: 150px;
+    }
+    
+    .team_member_1,.team_member_2,.team_member_3,.team_member_4{
+        display: inline-block;
+        width: 350px;
+        height: 160px;
+    }
+    
+    .team_member_1,.team_member_2{
+        margin-top: 25px;
+        margin-left: 0px
+    }
+    .team_member_3,.team_member_4{
+        margin-top: 55px;
+    }
+    
+    
+    .team_member_1{ 
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 5;
+         
+    }
+    
+    .team_pic_1{
+        display: inline-block;
+    }
+    
+    .team_pic_1_content{
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    font-size: 12px;
+    }
+    
+    
+    .team_member_2{
+    grid-column-start: 6;
+    grid-column-end: 10;
+    grid-row-start: 1;
+    grid-row-end: 5;
+    }
+    
+    .team_pic_2{
+        display: inline-block;
+    }
+    
+    .team_pic_2_content{
+        display: inline-block;
+    width: 150px;
+    height: 150px;
+    font-size: 12px;
+    } 
+    
+    .team_member_3{
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 5;
+    grid-row-end: 10;
+    }
+    
+    .team_pic_3{
+        display: inline-block;
+    
+    }
+    
+    .team_pic_3_content{
+        display: inline-block;
+    width: 150px;
+    height: 150px;
+    font-size: 12px;
+    }
+    
+    .team_member_4{
+    grid-column-start: 6;
+    grid-column-end: 10;
+    grid-row-start: 5;
+    grid-row-end: 10; 
+    }
+    
+    .team_pic_4{
+        display: inline-block;
+    }
+    
+    .team_pic_4_content{
+        display: inline-block;
+    width: 150px;
+    height: 150px;
+    font-size: 12px;
+    }
+
+    
+    .team_group_pics{
+        height: 400px;
+    }
+    
+    .count_up{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(3,1fr);  
+    }
+    
+    
+    .happy_client, .finish_project, .cup_of_coffee, .working_days{
+    display: inline-block;
+    grid-row: 2/3;
+    margin-left: -20%;
+}
+    
+    .happy_client{
+        grid-column: 2/3;
+    }
+    .finish_project{
+        grid-column: 3/4;
+    }
+    .cup_of_coffee{
+        grid-column: 4/5;
+    }
+    .working_days{
+        grid-column: 5/6;
+    }
+    
+    .email_label{
+        display: block;
+    }
+    
+    section{
+    background-color: blue;
+    height: 2000px;
+}
+    
+    
+    
+}
 
 
 
