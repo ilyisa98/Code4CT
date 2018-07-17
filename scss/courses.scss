@@ -15,9 +15,9 @@ html{
     font-family: "helvetica neue", sans-serif;
 }
 
-.container *{
-    border: 1px solid black;
-}
+//.container *{
+//    border: 1px solid black;
+//}
 
 
 /*page layout*/
@@ -45,7 +45,7 @@ footer {grid-area: footer;}
 /*layout specs*/
 header, section, footer {
         width: 100%;
-        margin: 2px;
+        margin: 0px;
         margin-bottom: 0px;
 }
 
@@ -87,7 +87,7 @@ header{
 background-color: grey;
 height: 250px;
 }
-
+//contact us
 .courses_tag{
     display: block;
     grid-column-start: 5;
@@ -99,7 +99,7 @@ height: 250px;
     margin-top: 70px;
     text-align: center;
     line-height: 12px;
-    margin-left: 15%; 
+    margin-left: 40%; 
     background-color: rgba(0,0,0,0.5);
     color: #E69286;
 }
@@ -109,7 +109,7 @@ height: 250px;
 //section
 section{
     background-color: rgba(0,0,0,0.5);
-    height: 820px;
+    height: 750px;
 }
 
 //section layout
@@ -119,11 +119,11 @@ section{
     grid-template-rows: repeat(4,1fr);
   
     .main_content{
-    display: grid;
+    display: block;
     grid-row: 1/4;
     width: 100%;
-    height: 100%;
-    background-color: pink;     
+//    height: 600px;
+    background-color: #E49085;     
     }
     
     .campanies_carousel{
@@ -131,8 +131,8 @@ section{
     grid-row: 4/5;
     background-color: black;
     width: 100%;
-    height: 150px;
-    margin-top: 15px;
+    margin-top: 240px;
+    margin-bottom: 0px;
     height: 150px;
 }
 }
@@ -148,52 +148,54 @@ section{
     
     .courses{
     display: inline-grid;
-    grid-column: 1/4;
+    grid-column: 1/5;
     grid-row: 1/2;
+    }
+          
+.cartBtn{
+    border-radius:50%;
+    width:50px;
+    height:50px;
+    position:fixed;
+    top:300px;
+    right:5px;
+    z-index: 100px;
+}
+
+#demo, #demo2, #demo3{
+            font-size: 12px;
+    button{
+//        height: 10px;
+        font-size: 10px;
+//        margin-top: -10px;
     }
         
-    .basket{
-    display: inline-grid;
-    grid-column: 4/5;
-    grid-row: 1/2;
-    }   
+        }
 
-    .beginners_courses_content{
-    height: 250px;
+    .beginners_courses_content, .intermediate_courses_content{
+        height: 250px;
         display: flex;
+        border-radius: 10px;
     }
 
-    #beginner_js, #beginner_fsw, #beginner_pyth {
+    #beginner_js, #beginner_fsw, #beginner_pyth,#intermediate_js, #intermediate_fsw, #intermediate_pyth {
 //    display: inline-grid;
     width: 32%;
-    height: 100%;
+        margin-left: 12px;
+    height: 200px;
     font-size: 12px;
-        
+        border-radius: 10px;
+        background-color: antiquewhite;
+        text-align: center;
+        border: 1px solid black;
+        box-shadow: 5px 5px #888888;
+
         p{
             margin: 5px 0 5px 0;
         }
         
     }
 
-
-
-
-    .intermediate_courses_content{
-    height: 250px;
-      display: flex;
-    }
-
-    #intermediate_js, #intermediate_fsw, #intermediate_pyth {
-//    display: inline-block;
-    width: 32%;
-    height: 100%;
-    font-size: 12px;
-        
-        p{
-            margin: 5px 0 5px 0;
-        }
-        
-    }
 
 //main content styling
 
@@ -202,6 +204,72 @@ section{
             text-align: center;
         }
     }
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 25%;
+    top: 25%;
+    width: 50%; /* Full width */
+    height:50%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    border-radius: 10px; /*border curved*/
+}
+
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+.back{
+   margin: auto;
+    display: block;
+    width: 95%;
+    height:80%;
+    max-width: 700px;
+    background-color: rgba(255, 182, 193,0.9);
+    overflow-y:  scroll;
+    border-radius: 10px; /*border curved*/
+}
+
+/* Add Animation */
+.modal-content {    
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+
+@keyframes zoom {
+    from {transform:scale(0.1)} 
+    to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
 
 
 
@@ -230,7 +298,91 @@ section{
   }
 }
 
+//btns
 
+    button{
+    display: inline-block;
+    background-color: palevioletred;
+    color: white;
+    border-color: white;
+    z-index: 1;
+    padding:5px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+//large latop//
+@media screen and (min-width: 1026px) and (max-width: 1440px){
+
+}
+//laptop
+@media screen and (min-width: 768px) and (max-width: 1025px){
+}
+//tablet view//
+
+@media screen and (max-width: 768px){
+    //    main content layout
+    section{
+        height: 1490px;
+    }
+    .main_content{
+    display: block;
+    grid-row: 1/4;
+    width: 100%;
+    height: 1340px; 
+    }
+     .beginners_courses,.intermediate_courses{
+        display: block;
+        width: 100%;
+         grid-column: 1/4;
+         grid-row: 1/2;
+    }
+    .intermediate_courses{
+        grid-row: 2/4;
+    }
+        .beginners_courses_content, .intermediate_courses_content{
+        height: auto;
+        display: block;
+        border-radius: 10px;
+        width: 100%;
+    }
+   
+    #beginner_js, #beginner_fsw, #beginner_pyth,#intermediate_js, #intermediate_fsw, #intermediate_pyth {
+        display: block;
+        grid-column: 2/3;
+        width: 50%;
+        margin-left: 25%;
+        grid-column: 1/4;
+    }
+    .modal {
+    width: 100%; /* Full width */
+    height:50%;
+    left: 0;
+}
+ 
+}
+///all smartphones//
+
+@media screen and (max-width: 500px){
+    #beginner_js, #beginner_fsw, #beginner_pyth,#intermediate_js, #intermediate_fsw, #intermediate_pyth {
+        display: block;
+        grid-column: 1/4;
+        width: 100%;
+        margin-left: 0;
+        grid-column: 1/4;
+    }
+    
+    
+
+}
+
+//medium smartphone
+
+@media screen and (min-width: 320px) and (max-width: 375px){
+    
+}
+//small mobile
+@media screen  and (max-width: 320px){}
 
 
 ///footer/

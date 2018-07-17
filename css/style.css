@@ -26,24 +26,29 @@ header {
   top: 45%;
   left: 50%;
   height: 250px;
-  width: 200px;
+  width: 250px;
   right: 50%;
   font-size: 13px;
   color: white;
   text-align: center;
   transform: translate(-50%, -50%); }
-  #overlay_text button {
-    display: inline-block;
-    background-color: palevioletred;
-    color: white;
-    border-color: white;
-    z-index: 1;
-    height: 17px;
-    font-size: 12px;
-    border-radius: 10px; }
+
+button {
+  display: inline-block;
+  background-color: palevioletred;
+  color: white;
+  border-color: white;
+  z-index: 1;
+  padding: 5px;
+  border-radius: 10px; }
 
 button div {
   display: none; }
+
+.overlay_btn {
+  border: none;
+  margin-bottom: 15px;
+  padding: 5px; }
 
 .overlay_btn:hover div {
   display: inline-block;
@@ -52,11 +57,10 @@ button div {
   -webkit-transition: 60s; }
 
 .overlay_btn:hover {
-  padding-right: 10px;
+  padding-right: 20px;
   background-color: palevioletred;
   color: white;
   transition: 0.5s;
-  padding-top: 0px;
   text-align: left;
   cursor: pointer; }
 
@@ -132,7 +136,6 @@ nav {
   /*hamburger_menu*/
   /*menu background*/
   .menu {
-    margin: 0 15px 0;
     display: none;
     z-index: 11;
     background-color: white; }
@@ -213,15 +216,19 @@ nav {
     width: 100%; }
 
   .menu a {
-    display: inline-block;
+    display: inline-flex;
     text-decoration: none;
     color: #000;
     margin-top: 25px;
     margin-right: 10px;
+    margin-left: 10px;
     line-height: 15px;
     text-align: center;
     float: left;
     font-size: 16px; }
+
+  #home_anchor {
+    margin-left: 7%; }
 
   #searchicon_btn, #search_bar {
     display: inline-block;
@@ -274,12 +281,12 @@ html {
 
 section {
   background-color: white;
-  height: 5675px; }
+  height: 100%; }
 
 section {
   display: grid;
   grid-template-columns: repeat(10, 1fr);
-  grid-template-rows: repeat(70, 1fr); }
+  grid-template-rows: repeat(10, 1fr); }
 
 .who_we_are {
   display: block;
@@ -346,8 +353,7 @@ section {
 
 .who_we_are_photo_group {
   width: 250px;
-  height: 240px;
-  margin-top: 10px; }
+  height: 240px; }
 
 .course_outcome {
   display: grid;
@@ -579,7 +585,7 @@ section {
   background: url(../images/Code4CT-logos.png) repeat-x;
   height: 150px;
   width: 5076px;
-  animation: slide 30s linear infinite;
+  animation: slide 60s linear infinite;
   padding-left: 0;
   padding-right: 0; }
 
@@ -590,19 +596,18 @@ section {
     transform: translate3d(-3172px, 0, 0); } }
 footer {
   background-color: #E38F84;
-  height: 200px;
   margin-top: 10px; }
 
 /*    footer 5 columns*/
 footer {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(1, 1fr);
-  width: 100%; }
+  width: 100%;
+  height: 200px; }
 
 /*align each column inline    */
 .contact, .company, .help_support {
-  display: inline-block;
+  display: inline-grid;
   height: 200px;
   font-size: 11px;
   width: 100%; }
@@ -618,29 +623,26 @@ footer {
     width: 110px; } }
 .contact {
   display: inline-block;
-  grid-column-start: 2;
-  grid-column-end: 3;
+  grid-column: 2/3;
   background-color: #E38F84; }
 
 .company {
   display: inline-block;
-  grid-column-start: 3;
-  grid-column-end: 4;
+  grid-column: 3/4;
   background-color: #E38F84; }
   .company ul {
     margin-left: -15px; }
 
 .help_support {
   display: inline-block;
-  grid-column-start: 4;
-  grid-column-end: 5;
+  grid-column: 4/5;
   background-color: #E38F84; }
 
 /*bottom footer    */
 .copyright {
-  display: block;
-  grid-column-start: 1;
-  grid-column-end: 6; }
+  display: grid;
+  grid-column: 1/6;
+  height: 15px; }
 
 /* MOBILE STYLES FIRST - MOBILE STYLES*/
 html, body {
@@ -672,11 +674,126 @@ nav {
   grid-gap: 10px;
   margin: 0px; }
 
-header, section, footer {
+header, section {
   width: 100%;
-  margin: 2px;
+  height: 100%;
+  margin: 0px;
   margin-bottom: 0px; }
 
+@media screen and (min-width: 376px) and (max-width: 425px) {
+  section {
+    height: 100%; }
+
+  header {
+    height: 320px; }
+
+  .who_we_are_photo_group {
+    width: 100%;
+    height: 200px; }
+
+  .who_we_are_img1, .who_we_are_img2, .who_we_are_img3, .who_we_are_img4 {
+    width: 100%;
+    height: 200px; }
+
+  .portfolio_pic_1, .portfolio_pic_2, .portfolio_pic_3, .portfolio_pic_4, .portfolio_pic, .portfolio_pics {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 5px; }
+
+  .mySlides {
+    width: 100%;
+    height: 320px;
+    z-index: 0; }
+
+  #overlay {
+    height: 165px; }
+
+  #overlay_text {
+    font-size: 11px;
+    top: 50%;
+    height: 180px; }
+
+  .slider_btn {
+    top: 295px; }
+
+  .happy_client, .finish_project, .cup_of_coffee, .working_days {
+    margin-left: 10%; }
+
+  section {
+    height: 5590px; } }
+@media screen and (min-width: 321px) and (max-width: 375px) {
+  header {
+    height: 320px; }
+
+  .mySlides {
+    width: 100%;
+    height: 320px;
+    z-index: 0; }
+
+  #overlay {
+    height: 165px; }
+
+  #overlay_text {
+    font-size: 11px;
+    top: 50%;
+    height: 180px; }
+
+  .who_we_are_img1, .who_we_are_img2, .who_we_are_img3, .who_we_are_img4, .who_we_are_photo_group {
+    width: 100%;
+    height: 150px; }
+
+  .portfolio_pic_1, .portfolio_pic_2, .portfolio_pic_3, .portfolio_pic_4, .portfolio_pic, .portfolio_pics {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 5px; }
+
+  .slider_btn {
+    top: 295px; }
+
+  .happy_client, .finish_project, .cup_of_coffee, .working_days {
+    margin-left: 9%;
+    width: 70px; }
+
+  section {
+    height: 5470px; } }
+@media screen and (max-width: 320px) {
+  header {
+    height: 320px; }
+
+  .mySlides {
+    width: 100%;
+    height: 320px;
+    z-index: 0; }
+
+  #overlay {
+    height: 165px; }
+
+  #overlay_text {
+    font-size: 11px;
+    top: 50%;
+    height: 180px; }
+
+  .who_we_are_img1, .who_we_are_img2, .who_we_are_img3, .who_we_are_img4, .who_we_are_photo_group {
+    width: 100%;
+    height: 150px; }
+
+  .portfolio_pic_1, .portfolio_pic_2, .portfolio_pic_3, .portfolio_pic_4, .portfolio_pic, .portfolio_pics {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 5px; }
+
+  section {
+    height: 100%; }
+
+  .happy_client, .finish_project, .cup_of_coffee, .working_days {
+    width: 60px;
+    margin-left: 5%; }
+
+  .slider_btn {
+    top: 295px; }
+
+  section {
+    height: 5470px; } }
 @media screen and (min-width: 426px) and (max-width: 768px) {
   .mySlides {
     width: 100%;
@@ -711,6 +828,7 @@ header, section, footer {
     grid-row-start: 1;
     grid-row-end: 6;
     background-color: white;
+    margin-top: 20px;
     height: 0px; }
 
   .who_we_are_photo_group {
@@ -965,7 +1083,7 @@ header, section, footer {
 
   section {
     background-color: blue;
-    height: 2030px; } }
+    height: 100%; } }
 @media screen and (min-width: 470px) and (max-width: 525px) {
   .happy_client, .finish_project, .cup_of_coffee, .working_days {
     margin-left: 15%; }
@@ -978,86 +1096,6 @@ header, section, footer {
 
   .one {
     margin-left: 25%; } }
-@media screen and (min-width: 375px) and (max-width: 425px) {
-  section {
-    height: 5650px; }
-
-  header {
-    height: 320px; }
-
-  .mySlides {
-    width: 100%;
-    height: 320px;
-    z-index: 0; }
-
-  #overlay {
-    height: 165px; }
-
-  #overlay_text {
-    font-size: 11px;
-    top: 50%;
-    height: 180px; }
-
-  .slider_btn {
-    top: 295px; }
-
-  .happy_client, .finish_project, .cup_of_coffee, .working_days {
-    margin-left: 10%; }
-
-  section {
-    height: 5590px; } }
-@media screen and (min-width: 320px) and (max-width: 375px) {
-  header {
-    height: 320px; }
-
-  .mySlides {
-    width: 100%;
-    height: 320px;
-    z-index: 0; }
-
-  #overlay {
-    height: 165px; }
-
-  #overlay_text {
-    font-size: 11px;
-    top: 50%;
-    height: 180px; }
-
-  .slider_btn {
-    top: 295px; }
-
-  .happy_client, .finish_project, .cup_of_coffee, .working_days {
-    margin-left: 9%;
-    width: 70px; }
-
-  section {
-    height: 5670px; } }
-@media screen and (max-width: 320px) {
-  header {
-    height: 320px; }
-
-  .mySlides {
-    width: 100%;
-    height: 320px;
-    z-index: 0; }
-
-  #overlay {
-    height: 165px; }
-
-  #overlay_text {
-    font-size: 11px;
-    top: 50%;
-    height: 180px; }
-
-  section {
-    height: 5830px; }
-
-  .happy_client, .finish_project, .cup_of_coffee, .working_days {
-    width: 60px;
-    margin-left: 5%; }
-
-  .slider_btn {
-    top: 295px; } }
 @media screen and (min-width: 426px) and (max-width: 649px) {
   .who_we_are {
     height: 550px; }
@@ -1066,9 +1104,6 @@ header, section, footer {
     margin-left: 25%; }
 
   /*    section reduction*/
-  section {
-    height: 2920px; }
-
   /*portfoilio pictures grid reform        */
   .portfolio_group1 {
     width: 100%; }
@@ -1132,7 +1167,7 @@ header, section, footer {
       width: 100px;
       font-size: 10px;
       margin-left: 20px; } }
-@media screen and (min-width: 425px) and (max-width: 550px) {
+@media screen and (min-width: 426px) and (max-width: 550px) {
   .pc_icon, .speaker_icon, .tool_icon, .pages_icon {
     width: 100px;
     margin-left: 0; }
@@ -1142,7 +1177,7 @@ header, section, footer {
       margin-left: 0px; }
     .pc_icon .one, .speaker_icon .one, .tool_icon .one, .pages_icon .one {
       margin-left: 24%; } }
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media screen and (min-width: 769px) and (max-width: 1025px) {
   .mySlides {
     width: 100%;
     height: 450px;
@@ -1157,7 +1192,7 @@ header, section, footer {
     grid-column-end: 5;
     grid-row-start: 1;
     grid-row-end: 6;
-    width: 50%;
+    width: 40%;
     height: 200px; }
 
   .who_we_are_head {
@@ -1446,8 +1481,7 @@ header, section, footer {
     display: block; }
 
   section {
-    background-color: blue;
-    height: 2000px; } }
+    background-color: blue; } }
 @media screen and (min-width: 907px) and (max-width: 1024px) {
   .who_we_are_main {
     font-size: 13px; }
@@ -1469,11 +1503,14 @@ header, section, footer {
     grid-column-end: 5;
     grid-row-start: 1;
     grid-row-end: 6;
-    width: 50%;
+    width: 40%;
     height: 200px; }
 
   .who_we_are_head {
     margin-top: 10px; }
+
+  .who_we_are_main {
+    font-size: 13px; }
 
   .read_more {
     margin-bottom: 20px; }
@@ -1571,7 +1608,7 @@ header, section, footer {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
     grid-template-rows: repeat(10, 1fr);
-    width: 50%; }
+    width: 40%; }
 
   .portfolio_group2 {
     display: grid;
@@ -1670,7 +1707,7 @@ header, section, footer {
     margin-top: 55px; }
 
   .team_member_1 {
-    grid-column-start: 2;
+    grid-column-start: 3;
     grid-column-end: 5;
     grid-row-start: 1;
     grid-row-end: 5; }
@@ -1700,7 +1737,7 @@ header, section, footer {
     font-size: 12px; }
 
   .team_member_3 {
-    grid-column-start: 2;
+    grid-column-start: 3;
     grid-column-end: 5;
     grid-row-start: 5;
     grid-row-end: 10; }
@@ -1758,7 +1795,6 @@ header, section, footer {
     display: block; }
 
   section {
-    background-color: blue;
-    height: 2000px; } }
+    background-color: blue; } }
 
 /*# sourceMappingURL=style.css.map */

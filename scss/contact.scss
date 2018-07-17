@@ -55,7 +55,7 @@ footer {grid-area: footer;}
 /*layout specs*/
 header, section, footer {
         width: 100%;
-        margin: 2px;
+        margin: 0px;
         margin-bottom: 0px;
 }
 
@@ -106,12 +106,13 @@ height: 250px;
     grid-row-start: 1;
     grid-row-end: 2; 
     width: 150px;
+    height: 80px;
     margin-top: 70px;
     text-align: center;
     line-height: 12px;
-    margin-left: 15%;
+    margin-left: 40%; 
     background-color: rgba(0,0,0,0.5);
-    color: #E38F84;
+    color: #E69286;
     
 }
 
@@ -147,7 +148,18 @@ section{
     width: 100%;
 }
 
+//btns
 
+    button{
+    display: inline-block;
+    background-color: white;
+    color: #E39085;
+    border-color: #E39085;
+    z-index: 1;
+    padding:5px;
+    border-radius: 10px;
+    cursor: pointer;
+}
 /*footer////////////////////////*/
 @include footer;
 

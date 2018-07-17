@@ -8,9 +8,6 @@ html, body {
 html {
   font-family: "helvetica neue", sans-serif; }
 
-.container * {
-  border: 1px solid black; }
-
 /*page layout*/
 header {
   grid-area: header; }
@@ -36,7 +33,7 @@ footer {
 /*layout specs*/
 header, section, footer {
   width: 100%;
-  margin: 2px;
+  margin: 0px;
   margin-bottom: 0px; }
 
 /*header specs - grid*/
@@ -76,7 +73,6 @@ nav {
   /*hamburger_menu*/
   /*menu background*/
   .menu {
-    margin: 0 15px 0;
     display: none;
     z-index: 11;
     background-color: white; }
@@ -157,15 +153,19 @@ nav {
     width: 100%; }
 
   .menu a {
-    display: inline-block;
+    display: inline-flex;
     text-decoration: none;
     color: #000;
     margin-top: 25px;
     margin-right: 10px;
+    margin-left: 10px;
     line-height: 15px;
     text-align: center;
     float: left;
     font-size: 16px; }
+
+  #home_anchor {
+    margin-left: 7%; }
 
   #searchicon_btn, #search_bar {
     display: inline-block;
@@ -224,31 +224,30 @@ header {
   margin-top: 70px;
   text-align: center;
   line-height: 12px;
-  margin-left: 15%;
+  margin-left: 40%;
   background-color: rgba(0, 0, 0, 0.5);
   color: #E69286; }
 
 section {
   background-color: rgba(0, 0, 0, 0.5);
-  height: 820px; }
+  height: 750px; }
 
 section {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(4, 1fr); }
   section .main_content {
-    display: grid;
+    display: block;
     grid-row: 1/4;
     width: 100%;
-    height: 100%;
-    background-color: pink; }
+    background-color: #E49085; }
   section .campanies_carousel {
     display: grid;
     grid-row: 4/5;
     background-color: black;
     width: 100%;
-    height: 150px;
-    margin-top: 15px;
+    margin-top: 240px;
+    margin-bottom: 0px;
     height: 150px; }
 
 .main_content {
@@ -259,38 +258,112 @@ section {
 
 .courses {
   display: inline-grid;
-  grid-column: 1/4;
+  grid-column: 1/5;
   grid-row: 1/2; }
 
-.basket {
-  display: inline-grid;
-  grid-column: 4/5;
-  grid-row: 1/2; }
+.cartBtn {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  top: 300px;
+  right: 5px;
+  z-index: 100px; }
 
-.beginners_courses_content {
-  height: 250px;
-  display: flex; }
-
-#beginner_js, #beginner_fsw, #beginner_pyth {
-  width: 32%;
-  height: 100%;
+#demo, #demo2, #demo3 {
   font-size: 12px; }
-  #beginner_js p, #beginner_fsw p, #beginner_pyth p {
-    margin: 5px 0 5px 0; }
+  #demo button, #demo2 button, #demo3 button {
+    font-size: 10px; }
 
-.intermediate_courses_content {
+.beginners_courses_content, .intermediate_courses_content {
   height: 250px;
-  display: flex; }
+  display: flex;
+  border-radius: 10px; }
 
-#intermediate_js, #intermediate_fsw, #intermediate_pyth {
+#beginner_js, #beginner_fsw, #beginner_pyth, #intermediate_js, #intermediate_fsw, #intermediate_pyth {
   width: 32%;
-  height: 100%;
-  font-size: 12px; }
-  #intermediate_js p, #intermediate_fsw p, #intermediate_pyth p {
+  margin-left: 12px;
+  height: 200px;
+  font-size: 12px;
+  border-radius: 10px;
+  background-color: antiquewhite;
+  text-align: center;
+  border: 1px solid black;
+  box-shadow: 5px 5px #888888; }
+  #beginner_js p, #beginner_fsw p, #beginner_pyth p, #intermediate_js p, #intermediate_fsw p, #intermediate_pyth p {
     margin: 5px 0 5px 0; }
 
 .main_content h3 {
   text-align: center; }
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
+  left: 25%;
+  top: 25%;
+  width: 50%;
+  /* Full width */
+  height: 50%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.9);
+  /* Black w/ opacity */
+  border-radius: 10px;
+  /*border curved*/ }
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px; }
+
+.back {
+  margin: auto;
+  display: block;
+  width: 95%;
+  height: 80%;
+  max-width: 700px;
+  background-color: rgba(255, 182, 193, 0.9);
+  overflow-y: scroll;
+  border-radius: 10px;
+  /*border curved*/ }
+
+/* Add Animation */
+.modal-content {
+  animation-name: zoom;
+  animation-duration: 0.6s; }
+
+@keyframes zoom {
+  from {
+    transform: scale(0.1); }
+  to {
+    transform: scale(1); } }
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s; }
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer; }
 
 /* Slider */
 .wrapper {
@@ -310,21 +383,74 @@ section {
     transform: translate3d(0, 0, 0); }
   100% {
     transform: translate3d(-3172px, 0, 0); } }
+button {
+  display: inline-block;
+  background-color: palevioletred;
+  color: white;
+  border-color: white;
+  z-index: 1;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer; }
+
+@media screen and (max-width: 768px) {
+  section {
+    height: 1490px; }
+
+  .main_content {
+    display: block;
+    grid-row: 1/4;
+    width: 100%;
+    height: 1340px; }
+
+  .beginners_courses, .intermediate_courses {
+    display: block;
+    width: 100%;
+    grid-column: 1/4;
+    grid-row: 1/2; }
+
+  .intermediate_courses {
+    grid-row: 2/4; }
+
+  .beginners_courses_content, .intermediate_courses_content {
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    width: 100%; }
+
+  #beginner_js, #beginner_fsw, #beginner_pyth, #intermediate_js, #intermediate_fsw, #intermediate_pyth {
+    display: block;
+    grid-column: 2/3;
+    width: 50%;
+    margin-left: 25%;
+    grid-column: 1/4; }
+
+  .modal {
+    width: 100%;
+    /* Full width */
+    height: 50%;
+    left: 0; } }
+@media screen and (max-width: 500px) {
+  #beginner_js, #beginner_fsw, #beginner_pyth, #intermediate_js, #intermediate_fsw, #intermediate_pyth {
+    display: block;
+    grid-column: 1/4;
+    width: 100%;
+    margin-left: 0;
+    grid-column: 1/4; } }
 footer {
   background-color: #E38F84;
-  height: 200px;
   margin-top: 10px; }
 
 /*    footer 5 columns*/
 footer {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(1, 1fr);
-  width: 100%; }
+  width: 100%;
+  height: 200px; }
 
 /*align each column inline    */
 .contact, .company, .help_support {
-  display: inline-block;
+  display: inline-grid;
   height: 200px;
   font-size: 11px;
   width: 100%; }
@@ -340,28 +466,25 @@ footer {
     width: 110px; } }
 .contact {
   display: inline-block;
-  grid-column-start: 2;
-  grid-column-end: 3;
+  grid-column: 2/3;
   background-color: #E38F84; }
 
 .company {
   display: inline-block;
-  grid-column-start: 3;
-  grid-column-end: 4;
+  grid-column: 3/4;
   background-color: #E38F84; }
   .company ul {
     margin-left: -15px; }
 
 .help_support {
   display: inline-block;
-  grid-column-start: 4;
-  grid-column-end: 5;
+  grid-column: 4/5;
   background-color: #E38F84; }
 
 /*bottom footer    */
 .copyright {
-  display: block;
-  grid-column-start: 1;
-  grid-column-end: 6; }
+  display: grid;
+  grid-column: 1/6;
+  height: 15px; }
 
 /*# sourceMappingURL=courses.css.map */

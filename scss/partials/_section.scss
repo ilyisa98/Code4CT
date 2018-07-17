@@ -2,12 +2,13 @@
     
     section{
     background-color: white;
-    height: 5675px;
+    height: 100%;
+//    height: 5675px;
 }
 section{
     display: grid;
     grid-template-columns: repeat(10,1fr);
-    grid-template-rows: repeat(70,1fr);
+    grid-template-rows: repeat(10,1fr);
 }
 
 .who_we_are{
@@ -80,7 +81,6 @@ section{
 .who_we_are_photo_group{
     width: 250px;
     height: 240px;
-    margin-top: 10px;
 }
 
 .course_outcome{
@@ -355,7 +355,7 @@ section{
   background: url(../images/Code4CT-logos.png) repeat-x;
   height: 150px;
   width: 5076px;
-  animation: slide 30s linear infinite;
+  animation: slide 60s linear infinite;
   padding-left: 0;
   padding-right: 0;
 }
